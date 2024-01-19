@@ -23,7 +23,7 @@
 
   <div class="my-5">
     <%= form.label :tag_ids %>
-    <%= form.select :tag_ids, Tag.pluck(:name, :id), {}, { multiple: true }%>
+    <%= form.select :tag_ids, Tag.pluck(:name, :id), {}, { multiple: true, data: {controller: 'slim'}}%>
   </div>
 
   <div class="inline">
