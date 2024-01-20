@@ -5,13 +5,13 @@
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">User_id:</strong>
-    <%= post.user_id %>
+    <strong class="block font-medium mb-1">User:</strong>
+    <%= post.user.email %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Tag_ids:</strong>
-    <%= post.tag_ids %>
+    <strong class="block font-medium mb-1">Tags:</strong>
+    <%= post.tags.pluck(:name).join(', ') %>
   </p>
 
   <% if action_name != "show" %>
